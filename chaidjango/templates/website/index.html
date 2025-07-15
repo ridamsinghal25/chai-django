@@ -1,0 +1,123 @@
+{% extends "layout.html" %} 
+
+
+ {% block title %}
+Home Page 
+{% endblock %}
+
+
+{% block content %}
+<!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-chai-brown to-amber-800 text-white">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Welcome to Chai Bliss</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Experience the finest collection of premium teas from around the world. Every sip tells a story.</p>
+                <a href="{% url "all_chai" %}">
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                        Explore Our Collection
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-chai-brown mb-4">Featured Teas</h2>
+                <p class="text-gray-600 text-lg">Discover our most popular and exquisite tea blends</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-chai-cream rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://images.pexels.com/photos/32993269/pexels-photo-32993269.jpeg" alt="Masala Chai" class="w-full h-72 object-cover">
+                    <div class="p-2">
+                        <h3 class="text-xl font-bold text-chai-brown mb-2">Premium Masala Chai</h3>
+                        <p class="text-gray-600 mb-4">A perfect blend of aromatic spices and premium tea leaves</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-chai-gold">$24.99</span>
+                            <button class="bg-chai-brown hover:bg-amber-800 text-white px-4 py-2 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-chai-cream rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://images.pexels.com/photos/5946616/pexels-photo-5946616.jpeg" alt="Earl Grey" class="w-full h-72 object-cover">
+                    <div class="p-2">
+                        <h3 class="text-xl font-bold text-chai-brown mb-2">Earl Grey Supreme</h3>
+                        <p class="text-gray-600 mb-4">Classic Earl Grey with bergamot and cornflower petals</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-chai-gold">$19.99</span>
+                            <button class="bg-chai-brown hover:bg-amber-800 text-white px-4 py-2 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-chai-cream rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://images.pexels.com/photos/3904035/pexels-photo-3904035.jpeg" alt="Green Tea" class="w-full h-72 object-cover">
+                    <div class="p-2">
+                        <h3 class="text-xl font-bold text-chai-brown mb-2">Dragon Well Green</h3>
+                        <p class="text-gray-600 mb-4">Delicate green tea with a fresh, clean taste</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-chai-gold">$22.99</span>
+                            <button class="bg-chai-brown hover:bg-amber-800 text-white px-4 py-2 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-chai-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-chai-brown mb-4">Why Choose Chai Bliss?</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-chai-gold rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-chai-brown mb-2">Premium Quality</h3>
+                    <p class="text-gray-600">Hand-selected tea leaves from the finest gardens worldwide</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-chai-gold rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-chai-brown mb-2">Fresh & Fast</h3>
+                    <p class="text-gray-600">Quick delivery ensuring maximum freshness and flavor</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-chai-gold rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-chai-brown mb-2">Made with Love</h3>
+                    <p class="text-gray-600">Every blend crafted with passion and expertise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
