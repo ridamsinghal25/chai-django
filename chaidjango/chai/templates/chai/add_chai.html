@@ -1,0 +1,20 @@
+{% extends "chai_layout.html" %}
+
+{% block title %}
+Add Chai
+{% endblock %}
+
+{% block content %}
+<div class="h-screen">
+
+    <h1 class="text-2xl font-bold mb-4">Add New Chai</h1>
+
+    <form method="POST" enctype="multipart/form-data" class="space-y-4" >
+        {% csrf_token %} 
+        {{form.as_p}}
+        <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
+            Add Chai
+        </button>
+    </form>
+</div>
+{% endblock %}
